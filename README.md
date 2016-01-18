@@ -5,7 +5,7 @@ Fill in your Google Developer ClientID and Client Secret in credentials.json
 
 ##Usage:
 
-`node app.js
+`node app.js`
 
 ##Process:
 
@@ -14,4 +14,4 @@ The First Google Login account is the producer of the Youtube Subscriptions.Afte
 
 The progress and number of subscriptions are displayed in the console.
 
-![alt tag](https://raw.github.com/spiritson/YouMigrate/screenshot.png)
+![ScreenShot](screenshot.png)
