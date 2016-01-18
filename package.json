@@ -1,0 +1,26 @@
+{
+  "name": "youmigrate",
+  "version": "1.0.0",
+  "description": "A NodeJS application to migrate Youtube Subscriptions from one account to another.",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "youtube",
+    "subscriptions",
+    "copy",
+    "migrate"
+  ],
+  "author": "spiritson",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "exit": "^0.1.2",
+    "express": "^4.13.3",
+    "googleapis": "^2.1.7",
+    "opener": "^1.4.1",
+    "progress": "^1.1.8",
+    "unirest": "^0.4.2",
+    "youtube-api": "^1.4.0"
+  }
+}
