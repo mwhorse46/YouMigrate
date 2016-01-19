@@ -7,6 +7,7 @@ Fill in your Google Developer ClientID and Client Secret in credentials.json
 
 `node app.js`
 
+Important Note : Make sure you are logged out of all your google account in default browser before starting the application.
 ##Process:
 
 The browser is automatically opened when the app is run.

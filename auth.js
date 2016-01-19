@@ -9,7 +9,7 @@ var Youtube = require("youtube-api");
 var scopes = [
     'https://www.googleapis.com/auth/youtube',
     'https://www.googleapis.com/auth/youtube.force-ssl',
-    'https://www.googleapis.com/auth/youtubepartner',
+    'https://www.googleapis.com/auth/youtubepartner'
 ];
 
 youtubeAuth = function(){
@@ -21,12 +21,19 @@ youtubeAuth = function(){
         , redirect_url: REDIRECT_URL
     });
 
+    this.authObj2 = this.authObj;
+
     this.authURL;
 
 
     this.getAuthObject = function(){
 
         return this.authObj;
+    }
+
+    this.getAuthObject2 = function(){
+
+        return this.authObj2;
     }
 
 

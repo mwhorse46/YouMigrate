@@ -64,14 +64,18 @@ function processSubscriptionData(subList) {
     var noOfSubscriptions = subList.pageInfo.totalResults;
 
     console.log(noOfSubscriptions + " Subscriptions found");
-    bar = new progressBar('Adding Subscriptions [:bar] :percent :etas', { total: 6, width:20 ,callback:end });
-    bar.tick();
 
-    var authObj = youtubeAuth.getAuthObject();
-    authObj.setCredentials(user1Tokens);
+    //TODO unsure why Youtube API only returns n-3 subscriptions always.
+    bar = new progressBar('Adding Subscriptions [:bar] :percent ', { total: noOfSubscriptions-3, width:20 ,callback:end });
+
 
     if (subList.hasOwnProperty('nextPageToken')){
+
         process(null,subList);
+    }
+    else{
+        /*only one page*/
+        putSubscription(subList);
     }
 
 }
@@ -82,6 +86,8 @@ function end(){
 }
 
 function process(err,data){
+
+    putSubscription(data);
 
     var authObj = youtubeAuth.getAuthObject();
     authObj.setCredentials(user1Tokens);
@@ -96,17 +102,18 @@ function process(err,data){
         youtubeAuth.getSubscriptions(resources,process);
     }
 
-    putSubscription(data);
+
 }
 
 
 function putSubscription(subList){
 
-    var authObj = youtubeAuth.getAuthObject();
-    authObj.setCredentials(user2Tokens);
+
+    var authObj2 = youtubeAuth.getAuthObject2();
+    authObj2.setCredentials(user2Tokens);
 
     var length=subList.items.length;
-    length=3;
+
 
     // Change to subList.items.length
     for (var i = 0; i <length; i++) {
@@ -115,7 +122,7 @@ function putSubscription(subList){
             snippet: {
                 resourceId: {
                     kind: subList.items[i].snippet.resourceId.kind,
-                    channelId: subList.items[i].snippet.resourceId.channelId,
+                    channelId: subList.items[i].snippet.resourceId.channelId
                 }
             }
         };
@@ -127,8 +134,9 @@ function putSubscription(subList){
 
             }
             bar.tick(1);
-
         });
+
+
     }
 
 }
