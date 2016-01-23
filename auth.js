@@ -21,21 +21,13 @@ youtubeAuth = function(){
         , redirect_url: REDIRECT_URL
     });
 
-    this.authObj2 = this.authObj;
-
+ 
     this.authURL;
-
 
     this.getAuthObject = function(){
 
         return this.authObj;
     }
-
-    this.getAuthObject2 = function(){
-
-        return this.authObj2;
-    }
-
 
     this.getAuthURL = function(){
 
