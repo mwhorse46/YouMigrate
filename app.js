@@ -109,8 +109,8 @@ function process(err,data){
 function putSubscription(subList){
 
 
-    var authObj2 = youtubeAuth.getAuthObject2();
-    authObj2.setCredentials(user2Tokens);
+    var authObj = youtubeAuth.getAuthObject();
+    authObj.setCredentials(user2Tokens);
 
     var length=subList.items.length;
 
