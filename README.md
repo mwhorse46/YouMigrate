@@ -4,7 +4,11 @@ A NodeJS application to migrate Youtube subscriptions from one account to anothe
 ##Usage:
 `npm install`
 
-`Fill in your Google Developer ClientID and Client Secret in credentials.json`
+`Fill in your Google Developer ClientID and Client Secret in the file "credentials.json" in root directory
+The variables are 
+client_id;
+client_secret;
+redirect_url;`
 
 `node app.js`
 
