@@ -14,6 +14,7 @@ var authURL = youtubeAuth.getAuthURL();
 var persistentCounter=0;
 
 
+console.log("Waiting for Authorization")
 
 /** Start getting Tokens for Users*/
 opener(authURL);
@@ -142,4 +143,4 @@ function putSubscription(subList){
 }
 
 
-app.listen(8080,'127.0.0.1');
+app.listen(8080,'localhost');
