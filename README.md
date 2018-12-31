@@ -1,7 +1,7 @@
 # YouMigrate
 A NodeJS application to migrate Youtube subscriptions from one account to another.
 
-##Usage:
+## Usage:
 `npm install`
 
 * Follow the instructions here `https://developers.google.com/identity/protocols/OAuth2WebServer` to get a ClientID and Client Secret
@@ -9,7 +9,7 @@ A NodeJS application to migrate Youtube subscriptions from one account to anothe
 * Make sure you are logged out of all your google account in default browser before starting the application.
 * `npm run start`
 
-##Process:
+## Process:
 
 * The browser is automatically opened when the app is run.
 * The First Google Login account is the producer of the Youtube Subscriptions. After authorization you are immediately redirected to the consumer Google account.
